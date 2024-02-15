@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class Topics {
+public class Topic {
     private String id;
     private String name;
     private String description;
