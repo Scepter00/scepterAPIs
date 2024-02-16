@@ -1,6 +1,8 @@
 package com.application.scepter.services;
 
 import com.application.scepter.data.models.Topic;
+import com.application.scepter.data.repositories.TopicRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,6 +13,9 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 public class TopicService {
+
+    @Autowired
+    private TopicRepository topicRepository;
 
     private List<Topic> topics = new ArrayList<> (Arrays.asList(
             new Topic("Spring", "Spring Framework", "Spring Framework Description"),
